@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jhakanaka Production With Tailwind</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yellow: '#FECC02',
+                        black: "#131313",
+                        gray: "#4E4E4E",
+                        white: "#FFFFFF",
+                    },
+                    fontFamily: {
+                        bebas: ['Bebas Neue', "cursive"],
+                        Montserrat: ['Montserrat', "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
 </head>
+
 <body>
-    
+    <header>
+        <!-- nav -->
+        <nav class="bg-white h-20 font-bebas fixed top-0 right-0 left-0"> 
+            <!-- nac fixed kora hoice -->
+            <div class="flex justify-between items-center h-20 w-full max-w-7xl mx-auto px-5">
+
+                <h1 class="text-2xl">Jhakanaka Production</h1>
+                <ul class="flex  text-lg gap-8">
+                    <li>About Us</li>
+                    <li>Our Movies</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- nav ends -->
+        <!-- main header -->
+
+        <section class="h-screen pt-20 bg-[url('./images/banner.jpg')] bg-cover">
+            <div class="h-full w-full max-w-7xl mx-auto px-5 flex items-center">
+                <div class="font-bebas">
+                    <h3 class=" text-white text-lg">Movie production studio</h3>
+                    <h1 class="text-white text-7xl">Films MAde to</h1>
+                    <h1 class="text-yellow text-7xl">Perfection</h1>
+                    <p class="font-Montserrat text-white max-w-lg mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut  elit tellus, 
+                        luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <button class="font-bebas border-2 border-white hover:bg-yellow hover:border-yellow hover:text-black transition-all py-2 px-3 text-white text-lg">Discover More</button>
+                </div>
+            </div>
+            
+        </section>
+    </header>
 </body>
+
 </html>
